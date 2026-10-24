@@ -1,0 +1,23 @@
+/* Ячейка ленты остаётся в DOM (чтобы виртуальный список X не ломался), прячем только её содержимое */
+html.xab-hide:not(.xab-debug) [data-xab-ad="cell"] > * {
+  display: none !important;
+}
+
+html.xab-hide:not(.xab-debug) [data-xab-ad="self"] {
+  display: none !important;
+}
+
+/* Режим проверки: реклама не скрывается, а обводится красным */
+html.xab-debug [data-xab-ad] {
+  outline: 3px solid #f4212e !important;
+  outline-offset: -3px;
+}
+
+/* Блоки правой колонки, каждый под своим переключателем */
+html.xab-hidePremium [data-xab-side="hidePremium"],
+html.xab-hideTrends [data-xab-side="hideTrends"],
+html.xab-hideFollow [data-xab-side="hideFollow"],
+html.xab-hideOther [data-xab-side="hideOther"],
+html.xab-hideSearch [data-xab-side="hideSearch"] {
+  display: none !important;
+}

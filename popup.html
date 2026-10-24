@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Ad Hider for X</title>
+  <style>
+    :root {
+      --bg: #000;
+      --panel: #16181c;
+      --border: #2f3336;
+      --text: #e7e9ea;
+      --muted: #71767b;
+      --accent: #1d9bf0;
+      --danger: #f4212e;
+      --ok: #00ba7c;
+      --warn: #ffd400;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      width: 340px;
+      background: var(--bg);
+      color: var(--text);
+      font: 14px/1.4 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+    header { padding: 14px 16px 10px; border-bottom: 1px solid var(--border); }
+    h1 { margin: 0; font-size: 17px; }
+    .stats { display: flex; gap: 8px; padding: 12px 16px; }
+    .stat { flex: 1; background: var(--panel); border-radius: 12px; padding: 8px 10px; }
+    .stat b { display: block; font-size: 20px; }
+    .stat span { color: var(--muted); font-size: 12px; }
+    label.row {
+      display: flex; align-items: center; justify-content: space-between; gap: 12px;
+      padding: 8px 16px; cursor: pointer;
+    }
+    label.row small { display: block; color: var(--muted); font-size: 12px; }
+    input[type=checkbox] { width: 18px; height: 18px; accent-color: var(--accent); flex: none; }
+    section { border-top: 1px solid var(--border); margin-top: 6px; padding: 10px 16px 14px; }
+    .section-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; }
+    .section-head h2 { margin: 0; font-size: 15px; }
+    button {
+      background: var(--text); color: #000; border: 0; border-radius: 999px;
+      padding: 4px 12px; font: inherit; font-size: 12px; font-weight: 700; cursor: pointer;
+    }
+    button:disabled { opacity: .4; cursor: default; }
+    ul { list-style: none; margin: 0; padding: 0; max-height: 240px; overflow-y: auto; }
+    li {
+      display: flex; align-items: center; justify-content: space-between; gap: 8px;
+      padding: 6px 0; border-bottom: 1px solid var(--border);
+    }
+    li:last-child { border-bottom: 0; }
+    li a { color: var(--text); text-decoration: none; overflow: hidden; text-overflow: ellipsis; }
+    li a:hover { text-decoration: underline; }
+    .meta { color: var(--muted); font-size: 12px; }
+    .chip { font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 999px; white-space: nowrap; }
+    .chip.blocked { color: var(--ok); background: rgba(0,186,124,.12); }
+    .chip.pending { color: var(--warn); background: rgba(255,212,0,.12); }
+    .chip.failed { color: var(--danger); background: rgba(244,33,46,.12); }
+    h2.group { margin: 6px 0 0; padding: 10px 16px 2px; border-top: 1px solid var(--border); font-size: 15px; }
+    .empty, .note { color: var(--muted); font-size: 12px; }
+    .note { margin: 10px 0 0; }
+  </style>
+</head>
+<body>
+  <header><h1 data-i18n="extName"></h1></header>
+
+  <div class="stats">
+    <div class="stat"><b id="hidden">0</b><span data-i18n="statFound"></span></div>
+    <div class="stat"><b id="blocked">0</b><span data-i18n="statBlocked"></span></div>
+  </div>
+
+  <label class="row">
+    <div><span data-i18n="optHide"></span><small data-i18n="optHideHint"></small></div>
+    <input type="checkbox" id="hide">
+  </label>
+  <label class="row">
+    <div><span data-i18n="optCloseUpsells"></span><small data-i18n="optCloseUpsellsHint"></small></div>
+    <input type="checkbox" id="closeUpsells">
+  </label>
+  <label class="row">
+    <div><span data-i18n="optAutoBlock"></span><small data-i18n="optAutoBlockHint"></small></div>
+    <input type="checkbox" id="autoBlock">
+  </label>
+  <label class="row">
+    <div><span data-i18n="optDebug"></span><small data-i18n="optDebugHint"></small></div>
+    <input type="checkbox" id="debug">
+  </label>
+
+  <h2 class="group" data-i18n="sidebarTitle"></h2>
+  <label class="row">
+    <span data-i18n="optSidePremium"></span>
+    <input type="checkbox" id="hidePremium">
+  </label>
+  <label class="row">
+    <span data-i18n="optSideTrends"></span>
+    <input type="checkbox" id="hideTrends">
+  </label>
+  <label class="row">
+    <span data-i18n="optSideFollow"></span>
+    <input type="checkbox" id="hideFollow">
+  </label>
+  <label class="row">
+    <span data-i18n="optSideOther"></span>
+    <input type="checkbox" id="hideOther">
+  </label>
+  <label class="row">
+    <span data-i18n="optSideSearch"></span>
+    <input type="checkbox" id="hideSearch">
+  </label>
+
+  <section>
+    <div class="section-head">
+      <h2 data-i18n="advertisersTitle"></h2>
+      <button id="blockAll" disabled data-i18n="blockAll"></button>
+    </div>
+    <ul id="list"></ul>
+    <p class="note" data-i18n="queueNote"></p>
+  </section>
+
+  <script src="popup.js"></script>
+</body>
+</html>

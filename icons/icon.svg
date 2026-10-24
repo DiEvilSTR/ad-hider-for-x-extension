@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <clipPath id="head"><circle cx="60" cy="66" r="50"/></clipPath>
+  </defs>
+  <!-- хвостики повязки -->
+  <path d="M100 40 C112 30 118 22 124 12 C116 26 114 34 104 46 Z" fill="#e0245e"/>
+  <path d="M102 46 C114 44 120 40 126 32 C122 44 116 50 104 52 Z" fill="#c01d4f"/>
+  <!-- голова ниндзя -->
+  <circle cx="60" cy="66" r="50" fill="#1f2a36"/>
+  <g clip-path="url(#head)">
+    <rect x="0" y="30" width="128" height="12" fill="#e0245e"/>
+    <rect x="0" y="50" width="128" height="30" rx="15" fill="#f7cfa8"/>
+  </g>
+  <!-- глаза косятся вбок -->
+  <ellipse cx="42" cy="65" rx="11" ry="9" fill="#fff"/>
+  <ellipse cx="76" cy="65" rx="11" ry="9" fill="#fff"/>
+  <circle cx="48" cy="66" r="5" fill="#111"/>
+  <circle cx="82" cy="66" r="5" fill="#111"/>
+  <path d="M30 54 L54 58" stroke="#1f2a36" stroke-width="4" stroke-linecap="round"/>
+  <path d="M88 54 L64 58" stroke="#1f2a36" stroke-width="4" stroke-linecap="round"/>
+  <!-- зачёркнутая плашка AD -->
+  <g transform="rotate(-12 96 100)">
+    <rect x="72" y="86" width="50" height="28" rx="7" fill="#fff" stroke="#1f2a36" stroke-width="4"/>
+    <text x="97" y="108" text-anchor="middle" font-family="Arial Black, Arial, Helvetica, sans-serif" font-weight="900" font-size="20" fill="#1f2a36">AD</text>
+    <path d="M76 112 L118 88" stroke="#e0245e" stroke-width="6" stroke-linecap="round"/>
+  </g>
+</svg>

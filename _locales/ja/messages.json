@@ -1,0 +1,43 @@
+{
+  "extName": { "message": "Ad Hider for X" },
+  "extDescription": { "message": "x.com のプロモーション投稿を非表示にし、必要に応じて広告主をブロックします。" },
+
+  "statFound": { "message": "検出した広告" },
+  "statBlocked": { "message": "ブロックした広告主" },
+
+  "optHide": { "message": "広告を非表示" },
+  "optHideHint": { "message": "「広告」「プロモーション」ラベル付きのポスト" },
+  "optCloseUpsells": { "message": "プレミアムの案内を閉じる" },
+  "optCloseUpsellsHint": { "message": "「Plusに登録」などのウィンドウを自動で閉じます" },
+  "optAutoBlock": { "message": "広告主を自動ブロック" },
+  "optAutoBlockHint": { "message": "あなたのアカウントでブロックするため、すべての端末に反映されます" },
+  "optDebug": { "message": "確認モード" },
+  "optDebugHint": { "message": "非表示にせず、広告を赤枠で囲みます" },
+
+  "sidebarTitle": { "message": "右サイドバーで非表示" },
+  "optSidePremium": { "message": "「プレミアムにサブスクライブ」" },
+  "optSideTrends": { "message": "「いまどうしてる?」" },
+  "optSideFollow": { "message": "「おすすめユーザー」" },
+  "optSideOther": { "message": "その他のブロック(スポーツ、イベントなど)" },
+  "optSideSearch": { "message": "検索" },
+
+  "advertisersTitle": { "message": "広告主" },
+  "blockAll": { "message": "すべてブロック" },
+  "blockAllCount": {
+    "message": "すべてブロック($COUNT$)",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "emptyList": { "message": "まだありません。タイムラインをスクロールしてください。" },
+  "impressions": {
+    "message": "表示回数: $COUNT$",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "btnBlock": { "message": "ブロック" },
+  "btnRetry": { "message": "再試行" },
+  "statusBlocked": { "message": "ブロック済み" },
+  "statusPending": { "message": "待機中" },
+  "statusFailed": { "message": "エラー" },
+  "queueNote": { "message": "x.com のタブが開いている間、約5〜8秒ごとに1件ずつブロックします。" },
+
+  "errNoCt0": { "message": "ct0 Cookie がありません(ログインしていない可能性があります)" }
+}

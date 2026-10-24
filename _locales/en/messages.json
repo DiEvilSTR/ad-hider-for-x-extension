@@ -1,0 +1,43 @@
+{
+  "extName": { "message": "Ad Hider for X" },
+  "extDescription": { "message": "Hides promoted posts on x.com and can optionally block the advertisers." },
+
+  "statFound": { "message": "ads found" },
+  "statBlocked": { "message": "advertisers blocked" },
+
+  "optHide": { "message": "Hide ads" },
+  "optHideHint": { "message": "Posts labeled “Ad” / “Promoted”" },
+  "optCloseUpsells": { "message": "Close Premium popups" },
+  "optCloseUpsellsHint": { "message": "Windows like “Get Plus” close on their own" },
+  "optAutoBlock": { "message": "Auto-block advertisers" },
+  "optAutoBlockHint": { "message": "Blocks from your account, so it works on all your devices" },
+  "optDebug": { "message": "Debug mode" },
+  "optDebugHint": { "message": "Outline ads in red instead of hiding them" },
+
+  "sidebarTitle": { "message": "Hide in the right sidebar" },
+  "optSidePremium": { "message": "“Subscribe to Premium”" },
+  "optSideTrends": { "message": "“What’s happening”" },
+  "optSideFollow": { "message": "“Who to follow”" },
+  "optSideOther": { "message": "Other blocks (sports, events…)" },
+  "optSideSearch": { "message": "Search" },
+
+  "advertisersTitle": { "message": "Advertisers" },
+  "blockAll": { "message": "Block all" },
+  "blockAllCount": {
+    "message": "Block all ($COUNT$)",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "emptyList": { "message": "Nobody yet. Scroll your feed." },
+  "impressions": {
+    "message": "seen: $COUNT$",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "btnBlock": { "message": "Block" },
+  "btnRetry": { "message": "Retry" },
+  "statusBlocked": { "message": "blocked" },
+  "statusPending": { "message": "queued" },
+  "statusFailed": { "message": "error" },
+  "queueNote": { "message": "Accounts are blocked one at a time, every ~5–8 s, while an x.com tab is open." },
+
+  "errNoCt0": { "message": "no ct0 cookie (not logged in?)" }
+}

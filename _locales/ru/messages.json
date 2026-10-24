@@ -1,0 +1,43 @@
+{
+  "extName": { "message": "Ad Hider for X" },
+  "extDescription": { "message": "Скрывает рекламные посты на x.com и по желанию блокирует рекламодателей." },
+
+  "statFound": { "message": "рекламы найдено" },
+  "statBlocked": { "message": "рекламодателей в блоке" },
+
+  "optHide": { "message": "Скрывать рекламу" },
+  "optHideHint": { "message": "Посты с меткой «Реклама» / «Ad»" },
+  "optCloseUpsells": { "message": "Закрывать окна Premium" },
+  "optCloseUpsellsHint": { "message": "Окна вроде «Перейти на Plus» закрываются сами" },
+  "optAutoBlock": { "message": "Автоблок рекламодателей" },
+  "optAutoBlockHint": { "message": "Блок через твой аккаунт — работает на всех устройствах" },
+  "optDebug": { "message": "Режим проверки" },
+  "optDebugHint": { "message": "Не скрывать, а обводить рекламу красным" },
+
+  "sidebarTitle": { "message": "Скрывать в правой колонке" },
+  "optSidePremium": { "message": "«Подпишитесь на Premium»" },
+  "optSideTrends": { "message": "«Что происходит»" },
+  "optSideFollow": { "message": "«Кого читать»" },
+  "optSideOther": { "message": "Другие блоки (спорт, события…)" },
+  "optSideSearch": { "message": "Поиск" },
+
+  "advertisersTitle": { "message": "Рекламодатели" },
+  "blockAll": { "message": "Заблокировать всех" },
+  "blockAllCount": {
+    "message": "Заблокировать всех ($COUNT$)",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "emptyList": { "message": "Пока никого — полистай ленту." },
+  "impressions": {
+    "message": "показов: $COUNT$",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "btnBlock": { "message": "Блок" },
+  "btnRetry": { "message": "Ещё раз" },
+  "statusBlocked": { "message": "в блоке" },
+  "statusPending": { "message": "в очереди" },
+  "statusFailed": { "message": "ошибка" },
+  "queueNote": { "message": "Блокировка идёт по одному аккаунту раз в ~5–8 сек, пока открыта вкладка x.com." },
+
+  "errNoCt0": { "message": "нет ct0 (не залогинен?)" }
+}
