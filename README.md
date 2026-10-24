@@ -22,6 +22,19 @@ The extension is not in the Chrome Web Store, so you load it manually:
 3. Click **Load unpacked** and select the unzipped folder.
 4. Reload x.com.
 
+### iPhone / iPad (Safari)
+
+Safari on iOS can't load this extension directly, so there is a userscript version: [`x-ad-hider.user.js`](x-ad-hider.user.js). It hides ads, closes Premium popups and tidies the sidebar. It has no advertiser blocking or popup. Blocks you make with the Chrome extension apply to your whole account anyway, including the X app.
+
+1. Install the free [Userscripts](https://apps.apple.com/app/userscripts/id1463298887) app, open it and pick a folder for your scripts.
+2. In **Settings → Apps → Safari → Extensions**, turn on **Userscripts** and allow it on x.com.
+3. Save `x-ad-hider.user.js` into that folder (for example with the Files app).
+4. Open x.com in Safari.
+
+Settings are the `SETTINGS` block at the top of the file: set a line to `true` or `false`. The right-sidebar options only matter in **Request Desktop Website** mode, because the mobile layout has no sidebar.
+
+The script only runs in Safari tabs, not in the X app. If you add x.com to the Home Screen, turn off **Open as Web App**, otherwise it opens in a separate window where Safari extensions don't run.
+
 ## How it works
 
 - `content.js` watches the timeline and looks for the ad label in each post's header. The post text, author name and link previews are ignored, so a regular post that contains the word "Ad" is not hidden.
